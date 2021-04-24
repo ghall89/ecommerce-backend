@@ -33,7 +33,6 @@ router.get('/', async (req, res) => {
     res.json(results);
   } catch (err) {
     res.status(500).json(err);
-    console.log(err);
   }
 });
 
@@ -156,7 +155,7 @@ router.delete('/:id', (req, res) => {
   })
   .then(dbPostData => {
     if (!dbPostData) {
-      res.status(404).json({ message: 'No post found with this id' });
+      res.status(404).json({ message: 'No product found with this id' });
       return;
     }
     res.json(dbPostData);
