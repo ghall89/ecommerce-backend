@@ -22,7 +22,6 @@ router.get('/', async (req, res) => {
     res.json(results);
   } catch (err) {
     res.status(500).json(err);
-    console.log(err);
   }
 });
 
@@ -76,7 +75,7 @@ router.put('/:id', (req, res) => {
       }
     }
   )
-    res.json(`Changed category ${req.body.category_name}`);
+    res.json(`Changed category to ${req.body.category_name}`);
   } catch (err) {
     res.status(500).json(err);
   }
